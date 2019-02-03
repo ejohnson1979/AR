@@ -9,12 +9,9 @@
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 </div>
 	<!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
-	<a-scene embedded arjs='sourceType: webcam;'>
-
-		<a-sphere position="0 0.5 0" radius="0.5" color="#EF2D5E"></a-sphere>
-		<a-plane position="0 0 0" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
-
-		<a-marker-camera type='pattern' patternURL='https://ejohnson.github.io/AR/data/data/ilogo.patt'></a-marker-camera>
-	</a-scene>
+	<a-scene embedded arjs='sourceType: webcam;'> 
+		<!-- handle marker with your own pattern --> <a-marker preset='custom' url='patt.ilogo'> 
+		<a-sphere position="-1 0 0" rotation="90 180 0 "> 
+			</a-marker> <!-- add a simple camera --> <a-entity camera></a-entity> </a-scene>
 </body>
 </html>
